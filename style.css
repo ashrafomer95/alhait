@@ -12,13 +12,13 @@
 :root {
     --color-primary: #1a5632;        /* أخضر داكن (أساسي) */
     --color-secondary: #f0fdf4;       /* أخضر فاتح جداً للخلفيات الثانوية */
-    --color-accent: #34d399;         /* أخضر فاتح للتمييز والعناصر التفاعلية */
-    --color-text-dark: #1f2937;      /* نص داكن للقراءة */
-    --color-text-light: #f9fafb;     /* نص فاتح للخلفيات الداكنة */
-    --color-primary-light: #3e7b51;  /* أخضر أفتح قليلاً من الأساسي للحواف */
-    --color-gray-dark: #34495e;      /* رمادي فحمي داكن */
-    --color-gray-medium: #888;       /* رمادي متوسط لمقابض شريط التمرير */
-    --color-gray-light: #f1f1f1;     /* رمادي فاتح لخلفية شريط التمرير */
+    --color-accent: #34d399;          /* أخضر فاتح للتمييز والعناصر التفاعلية */
+    --color-text-dark: #1f2937;       /* نص داكن للقراءة */
+    --color-text-light: #f9fafb;      /* نص فاتح للخلفيات الداكنة */
+    --color-primary-light: #3e7b51;   /* أخضر أفتح قليلاً من الأساسي للحواف */
+    --color-gray-dark: #34495e;       /* رمادي فحمي داكن */
+    --color-gray-medium: #888;        /* رمادي متوسط لمقابض شريط التمرير */
+    --color-gray-light: #f1f1f1;      /* رمادي فاتح لخلفية شريط التمرير */
 }
 
 /*
@@ -27,12 +27,12 @@
  */
 body {
     font-family: 'Inter', 'Tajawal', sans-serif; /* تفضيل Inter ثم Tajawal */
-    direction: rtl;                            /* اتجاه النص من اليمين لليسار */
-    text-align: right;                         /* محاذاة النص لليمين افتراضيًا */
-    scroll-behavior: smooth;                   /* تمرير سلس للصفحة */
+    direction: rtl;                             /* اتجاه النص من اليمين لليسار */
+    text-align: right;                          /* محاذاة النص لليمين افتراضيًا */
+    scroll-behavior: smooth;                    /* تمرير سلس للصفحة */
     background-color: var(--color-text-light); /* خلفية بيضاء خفيفة */
-    color: var(--color-gray-dark);             /* لون الخط الأساسي */
-    position: relative;                        /* لتمكين خلفية الشعار الشفافة */
+    color: var(--color-gray-dark);              /* لون الخط الأساسي */
+    position: relative;                         /* لتمكين خلفية الشعار الشفافة */
     z-index: 0;
 }
 
@@ -47,7 +47,7 @@ body::before {
     background-image: url('logo 2.png'); /* **استبدل هذا بمسار شعارك الفعلي المحسن** */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: cover; /* لضمان تغطية الشاشة بالكامل */
     background-attachment: fixed; /* قد يؤثر على الأداء على الأجهزة القديمة */
     opacity: 0.02;
     z-index: -1;
@@ -130,15 +130,22 @@ h1, h2, h3, h4, h5, h6 {
  * 5. أنماط الشعارات (Header and Footer Logos)
  */
 .header-logo {
-    height: 70px;
-    width: auto;
-    max-width: 120px;
+    height: 40px; /* حجم أصغر للشعار على الجوال */
+    width: auto; /* يحافظ على نسبة العرض إلى الارتفاع */
+    max-width: 80px; /* يمنع الشعار من أن يصبح كبيراً جداً على الجوال */
     display: inline-block;
     vertical-align: middle;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) { /* للأجهزة اللوحية الصغيرة وما فوق */
     .header-logo {
-        height: 90px;
+        height: 60px;
+        max-width: 100px;
+    }
+}
+@media (min-width: 768px) { /* للأجهزة اللوحية الكبيرة وشاشات سطح المكتب */
+    .header-logo {
+        height: 80px;
+        max-width: 120px;
     }
 }
 
@@ -190,15 +197,31 @@ a, button, .transform {
 }
 
 .slider-container img {
-    min-width: 300px; /* حجم ثابت لكل صورة */
-    height: 200px;
+    min-width: 200px; /* حجم أصغر لكل صورة على الجوال */
+    height: 150px;
     object-fit: cover;
-    margin-left: 20px; /* مسافة بين الصور لليمين (في اتجاه RTL) */
+    margin-left: 15px; /* مسافة بين الصور لليمين (في اتجاه RTL) */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid var(--color-primary);
     flex-shrink: 0; /* تمنع الصور من الانكماش */
 }
+
+@media (min-width: 640px) { /* للأجهزة اللوحية الصغيرة وما فوق */
+    .slider-container img {
+        min-width: 250px;
+        height: 180px;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) { /* للأجهزة اللوحية الكبيرة وشاشات سطح المكتب */
+    .slider-container img {
+        min-width: 300px;
+        height: 200px;
+    }
+}
+
 
 /* تعريف حركة من اليسار لليمين */
 @keyframes scroll-ltr {
