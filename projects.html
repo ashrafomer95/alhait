@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريعنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* تعريف الألوان المخصصة - لوحة ألوان رسمية ومريحة (منقولة من index.html) */
+        :root {
+            --color-primary: #2c3e50; /* أزرق داكن عميق (Navy Blue) */
+            --color-accent: #66bbad; /* تركواز/أزرق مخضر هادئ */
+            --color-secondary-bg: #ecf0f1; /* رمادي مزرق فاتح جداً */
+            --color-text-dark: #34495e; /* رمادي فحمي داكن (مريح للعين) */
+            --color-text-light: #ffffff; /* أبيض نقي */
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-accent { background-color: var(--color-accent); }
+        .text-accent { color: var(--color-accent); }
+        .text-text-dark { color: var(--color-text-dark); }
+        .text-text-light { color: var(--color-text-light); }
+        .bg-secondary { background-color: var(--color-secondary-bg); }
+
+        /* الأنماط الخاصة بالشريط العلوي (Header) - منقولة من index.html */
+        .header-image-bg {
+            background-color: var(--color-text-light); /* خلفية بيضاء للشريط العلوي */
+        }
+
+        /* تنسيقات روابط القائمة في الـ Header - منقولة من index.html */
+        .header-nav-link {
+            color: var(--color-text-dark); /* لون رمادي داكن للنص */
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            padding: 8px 12px;
+        }
+
+        .header-nav-link:hover {
+            color: var(--color-primary); /* لون Primary عند التمرير */
+            background-color: rgba(0, 0, 0, 0.03); /* خلفية خفيفة جداً عند التمرير */
+            border-radius: 6px;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary); /* لون Primary للخط السفلي */
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-nav-link:hover::after {
+            transform: translateX(0%);
+        }
+
+        /* تنسيق خاص لزر "تبرع الآن" - منقولة من index.html */
+        .header-donate-button {
+            transition: all 0.3s ease-in-out;
+            color: var(--color-text-light); /* لون أبيض للنص */
+            background-color: var(--color-primary); /* لون Primary للخلفية */
+        }
+
+        .header-donate-button:hover {
+            background-color: var(--color-accent); /* لون Accent عند التمرير */
+            color: var(--color-text-light); /* أبيض عند التمرير */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CSS مخصص لخلفية الشعار الشفافة على الـ body - منقولة من index.html */
+        body {
+            position: relative;
+            z-index: 0;
+            background-color: var(--color-text-light); /* خلفية بيضاء خفيفة للصفحة */
+            font-family: 'Tajawal', sans-serif; /* تطبيق خط Tajawal هنا */
+            color: var(--color-text-dark); /* تغيير لون الخط الأساسي إلى الأبيض هنا */
+        }
+
+        /* override default text colors for specific sections if needed */
+        .text-text-dark { /* لإعادة استخدام هذا اللون في بعض الأماكن إذا لزم الأمر */
+            color: var(--color-text-dark);
+        }
+        /* إذا أردت أن تبقى العناوين باللون الأساسي (الأزرق الداكن) */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-primary); /* لجعل العناوين بلون أساسي */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('مسار/شعارك/هنا.png'); /* **استبدل هذا بمسار شعارك الفعلي** */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover; /* أو contain حسب رغبتك */
+            background-attachment: fixed;
+            opacity: 0.02; /* درجة شفافية أقل لجعلها أهدأ وأكثر خفاءً */
+            z-index: -1;
+        }
+
+        /* لتجنب تداخل الشعار واسم الجمعية - منقولة من index.html */
+        .header-logo {
+            max-height: 50px; /* لضمان حجم معقول للشعار */
+            width: auto;
+        }
+
+        /* إضافة تأثيرات ظهور (Reveal Animation) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* لتغيير لون النص الافتراضي ليكون أغمق بدلاً من الأبيض العام في body */
+        p.text-gray-700 {
+            color: #4a5568; /* لون رمادي داكن لفقرات الوصف */
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <header class="text-text-dark p-4 shadow-md header-image-bg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <img src="logo 2.png" alt="شعار الجمعية" class="header-logo flex-shrink-0" onerror="console.error('خطأ في تحميل شعار الجمعية: logo 2.png. يرجى التأكد من وجود الملف في نفس المجلد والتحقق من الاسم الصحيح.'); this.onerror=null; this.src='https://placehold.co/80x80/cccccc/000000?text=خطأ+في+الشعار';">
+                <a href="index.html" class="text-2xl font-bold whitespace-nowrap flex-grow text-text-dark">جمعية الخدمات الرياضية بمحافظة الحائط</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-text-dark focus:outline-none focus:ring-2 focus:ring-accent rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="mobile-menu" class="w-full md:w-auto hidden md:block">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-center md:text-right">
+                    <li><a href="index.html" class="block px-4 py-2 rounded-md header-nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 rounded-md header-nav-link">عن الجمعية</a></li>
+                    <li><a href="projects.html" class="block px-4 py-2 rounded-md header-nav-link">مشاريعنا</a></li>
+                    <li><a href="news.html" class="block px-4 py-2 rounded-md header-nav-link">الأخبار</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 rounded-md header-nav-link">اتصل بنا</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 reveal">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">مشاريعنا</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                <img src="13.png" alt="مشروع تعليمي" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">سباق الجري</h3>
+                    <p class="text-gray-700 mb-4">نفذت الجمعية باكورة برامجها لعام 2025 م برنامج سباق الجري بمحافظة الحائط يوم السبت 26 أبريل برعاية محافظ الحائط الاستاذ: فهد صنيدح الصنيدح وبحضور مساعد مدير مكتب فرع وزارة الرياضة بمنطقة حائل الاستاذ محمد الدرعان وبالشراكة مع الدوائر الحكومية بالمحافظة وعدد من الجهات غير الربحية بأركان تعريفية وأعلن سعادة المحافظ انطلاق السباق بمسافة 7 كم وكرم الفائزين بالمراكز العشر الأولي وشركاء النجاح والداعمين للبرنامج.</p>
+                    <a href="project-detail-running-race.html" class="text-accent hover:underline font-medium">تفاصيل المشروع &rarr;</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                <img src="صورة 3.png" alt="مشروع صحي" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">مباراة تحدي الطيبين لكرة القدم</h3>
+                    <p class="text-gray-700 mb-4">نفذت الجمعية برنامج تحدي الطيبين لكرة القدم لعام 2025 م بمحافظة الحائط يوم الأحد 08 يونيو على شرف رئيس بلدية محافظة الحائط المكلف الاستاذ: مرعيد بن على الريمان وبالشراكة مع الدوائر الحكومية بالمحافظة وعدد من الجهات غير الربحية تجمع بين أشهر ملاعب كرة القدم بالحائط قديماّ ملعب سعد وملعب القصير وتهدف إلى العودة لممارسة الرياضة لتحسين جودة الحياة وتجمع اللاعبين القدامي بمناسبة عيد الأضحي المبارك.</p>
+                    <a href="project-detail-football-challenge.html" class="text-accent hover:underline font-medium">تفاصيل المشروع &rarr;</a>
+                </div>
+            </div>
+
+             <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                <img src="تحدي البلاستيشن.png" alt="مسابقة البلاستيشن" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">مسابقة البلاستيشن</h3>
+                    <p class="text-gray-700 mb-4">نفذت الجمعية برنامج تحدي الطيبين لكرة القدم لعام 2025 م بمحافظة الحائط يوم الأحد 08 يونيو على شرف رئيس بلدية محافظة الحائط المكلف الاستاذ: مرعيد بن على الريمان وبالشراكة مع الدوائر الحكومية بالمحافظة وعدد من الجهات غير الربحية تجمع بين أشهر ملاعب كرة القدم بالحائط قديماّ ملعب سعد وملعب القصير وتهدف إلى العودة لممارسة الرياضة لتحسين جودة الحياة وتجمع اللاعبين القدامي بمناسبة عيد الأضحي المبارك.</p>
+                    <a href="project-detail-playstation-comp.html" class="text-accent hover:underline font-medium">تفاصيل المشروع &rarr;</a>
+                </div>
+            </div>
+
+            </div>
+        <section class="slider-wrapper relative py-8 bg-secondary">
+        <div class="slider-container" id="image-slider-container">
+            <img src="1.png" alt="صورة متحركة 1" loading="lazy">
+            <img src="2.png" alt="صورة متحركة 2" loading="lazy">
+            <img src="3.png" alt="صورة متحركة 3" loading="lazy">
+            <img src="4.png" alt="صورة متحركة 4" loading="lazy">
+            <img src="5.png" alt="صورة متحركة 5" loading="lazy">
+            <img src="6.png" alt="صورة متحركة 6" loading="lazy">
+            <img src="7.png" alt="صورة متحركة 7" loading="lazy">
+            <img src="8.png" alt="صورة متحركة 8" loading="lazy">
+            <img src="1.png" alt="صورة متحركة 1" loading="lazy">
+            <img src="2.png" alt="صورة متحركة 2" loading="lazy">
+            <img src="3.png" alt="صورة متحركة 3" loading="lazy">
+            <img src="4.png" alt="صورة متحركة 4" loading="lazy">
+            <img src="5.png" alt="صورة متحركة 5" loading="lazy">
+            <img src="6.png" alt="صورة متحركة 6" loading="lazy">
+            <img src="7.png" alt="صورة متحركة 7" loading="lazy">
+            <img src="8.png" alt="صورة متحركة 8" loading="lazy">
+        </div>
+
+        <button id="prev-slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-text-light p-3 rounded-full shadow-lg hover:bg-accent transition-colors duration-300 z-10" aria-label="الصورة السابقة">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button id="next-slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-primary text-text-light p-3 rounded-full shadow-lg hover:bg-accent transition-colors duration-300 z-10" aria-label="الصورة التالية">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">اتصل بنا</h3>
+                <p class="mb-2">البريد الإلكتروني: sportgalhait@gmail.com</p>
+                <p class="mb-2">الهاتف: +966545095033</p>
+                <p>العنوان: محافظة الحائط، المملكة العربية السعودية</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">روابط سريعة</h3>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">الأسئلة الشائعة</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">سياسة الخصوصية</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">تابعنا وشركاؤنا</h3>
+                <div class="flex flex-wrap items-center justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-text-light transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-text-light transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.288 4.106 4.106 0 001.27 5.477A4.072 4.072 0 014 9.775v.058a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.84" /></svg>
+                    </a>
+                    <img src="شعار وزارة الرياضة.png" alt="شعار وزارة الرياضة السعودية" class="footer-logo" onerror="console.error('خطأ في تحميل شعار وزارة الرياضة: يرجى التحقق من الرابط أو الاتصال بالإنترنت.'); this.onerror=null; this.src='https://placehold.co/100x60/cccccc/000000?text=خطأ+في+الشعار';">
+                    <img src="logo 2.png" alt="شعار الجمعية" class="footer-logo" onerror="console.error('خطأ في تحميل شعار الجمعية في الفوتر: logo 2.jpg. يرجى التأكد من وجود الملف والاسم الصحيح.'); this.onerror=null; this.src='https://placehold.co/60x60/cccccc/000000?text=خطأ+في+الشعار';">
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+            <p>&copy; 2025 جمعية الخدمات الرياضية بمحافظة الحائط . جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966500000000" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-110 z-50" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي الطيبين</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for WhatsApp and other icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-text-dark">
+    <!-- رأس الصفحة (Header) - نفس رأس الصفحة الرئيسية -->
+    <header class="text-text-light p-4 shadow-md header-image-bg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <img src="uploaded:logo 2.jpg-30443b34-9018-402f-8350-2859d3d92a05" alt="شعار الجمعية" class="header-logo flex-shrink-0" onerror="console.error('خطأ في تحميل شعار الجمعية: logo 2.jpg. يرجى التأكد من وجود الملف في نفس المجلد والتحقق من الاسم الصحيح.'); this.onerror=null; this.src='https://placehold.co/80x80/cccccc/000000?text=خطأ+في+الشعار';">
+                <a href="index.html" class="text-2xl font-bold whitespace-nowrap flex-grow">اسم الموقع الخيري</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-text-light focus:outline-none focus:ring-2 focus:ring-accent rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="mobile-menu" class="w-full md:w-auto hidden md:block">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-center md:text-right">
+                    <li><a href="index.html" class="block px-4 py-2 rounded-md hover:bg-accent hover:text-primary transition-colors">الرئيسية</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 rounded-md hover:bg-accent hover:text-primary transition-colors">عن المؤسسة</a></li>
+                    <li><a href="projects.html" class="block px-4 py-2 rounded-md hover:bg-accent hover:text-primary transition-colors">مشاريعنا</a></li>
+                    <li><a href="news.html" class="block px-4 py-2 rounded-md hover:bg-accent hover:text-primary transition-colors">الأخبار</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 rounded-md hover:bg-accent hover:text-primary transition-colors">اتصل بنا</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى صفحة تحدي الطيبين -->
+    <main class="container mx-auto px-4 py-16 reveal">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">تحدي الطيبين</h1>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-primary">صور من التحدي</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                استعرض أجمل اللحظات والصور التي التقطت خلال "تحدي الطيبين" الذي جمع الأصدقاء والعائلة في أجواء من المرح والمنافسة الشريفة.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- صور التحدي -->
+                <img src="uploaded:DSC05683.jpg-54f0f078-48d3-404b-8731-83b4155058c5" alt="صورة من تحدي الطيبين 1" class="w-full h-48 object-cover rounded-lg shadow-md">
+                <img src="uploaded:DSC05890.jpg-47970509-fa3a-4d63-9cb9-d2c32f1dd3e4" alt="صورة من تحدي الطيبين 2" class="w-full h-48 object-cover rounded-lg shadow-md">
+                <img src="uploaded:DSC05905.jpg-f3f23ac2-b8c6-4eb7-8731-87e9d0db8b6a" alt="صورة من تحدي الطيبين 3" class="w-full h-48 object-cover rounded-lg shadow-md">
+                <img src="uploaded:cup.png.jpg-a6febb48-3e0c-4bef-9ecf-776bcbc55bb9" alt="صورة من تحدي الطيبين 4" class="w-full h-48 object-cover rounded-lg shadow-md">
+                <!-- يمكنك إضافة المزيد من الصور هنا -->
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold mb-4 text-primary">تقرير التحدي</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                للاطلاع على تفاصيل كاملة حول "تحدي الطيبين"، بما في ذلك النتائج، الإحصائيات، واللحظات البارزة، يرجى تحميل التقرير الشامل.
+            </p>
+            <div class="text-center">
+                <a href="path/to/your/report.pdf" download class="inline-block bg-primary text-text-light px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-opacity-90 transition-colors">
+                    <i class="fas fa-file-pdf mr-2"></i> تحميل تقرير PDF
+                </a>
+                <p class="text-sm text-gray-500 mt-2">
+                    (ملاحظة: هذا رابط وهمي لملف PDF، يرجى استبداله بالمسار الصحيح لملفك.)
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة (Footer) - نفس تذييل الصفحة الرئيسية -->
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-white">اتصل بنا</h3>
+                <p class="mb-2">البريد الإلكتروني: info@example.com</p>
+                <p class="mb-2">الهاتف: +966 123 4567</p>
+                <p>العنوان: شارع الأمثلة، الرياض، المملكة العربية السعودية</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-white">روابط سريعة</h3>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white transition-colors">سياسة الخصوصية</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white transition-colors">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-white">تابعنا وشركاؤنا</h3>
+                <div class="flex flex-wrap items-center justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.288 4.106 4.106 0 001.27 5.477A4.072 4.072 0 014 9.775v.058a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.84" /></svg>
+                    </a>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Ministry_of_Sport_%28Saudi_Arabia%29_Logo.png" alt="شعار وزارة الرياضة السعودية" class="footer-logo" onerror="console.error('خطأ في تحميل شعار وزارة الرياضة: يرجى التحقق من الرابط أو الاتصال بالإنترنت.'); this.onerror=null; this.src='https://placehold.co/100x60/cccccc/000000?text=خطأ+في+الشعار';">
+                    <img src="uploaded:logo 2.jpg-30443b34-9018-402f-8350-2859d3d92a05" alt="شعار الجمعية" class="footer-logo" onerror="console.error('خطأ في تحميل شعار الجمعية في الفوتر: logo 2.jpg. يرجى التأكد من وجود الملف والاسم الصحيح.'); this.onerror=null; this.src='https://placehold.co/60x60/cccccc/000000?text=خطأ+في+الشعار';">
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+            <p>&copy; 2023 اسم الموقع الخيري. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/966500000000" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-110 z-50" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية الخدمات الرياضية بمحافظة الحائط</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="text-text-dark">
+    <header class="text-text-dark p-4 shadow-md header-image-bg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <img src="logo 2.png" alt="شعار جمعية الخدمات الرياضية بمحافظة الحائط" class="header-logo flex-shrink-0">
+                <a href="index.html" class="text-2xl font-bold whitespace-nowrap flex-grow text-text-dark">جمعية الخدمات الرياضية بمحافظة الحائط</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-text-dark focus:outline-none focus:ring-2 focus:ring-accent rounded-md p-2" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <nav id="mobile-menu" class="w-full md:w-auto hidden md:block">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-center md:text-right">
+                    <li><a href="index.html" class="block px-4 py-2 rounded-md header-nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 rounded-md header-nav-link">عن الجمعية</a></li>
+                    <li><a href="projects.html" class="block px-4 py-2 rounded-md header-nav-link">مشاريعنا</a></li>
+                    <li><a href="news.html" class="block px-4 py-2 rounded-md header-nav-link">الأخبار</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 rounded-md header-nav-link">اتصل بنا</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-primary text-text-light py-20 md:py-32 text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('cup.png');"></div>
+        <div class="container mx-auto relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">معاً نصنع الفرق</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">نحن نعمل بشغف لتحقيق التنمية المستدامة وتقديم العون للمحتاجين.</p>
+            <a href="about.html" class="inline-block bg-accent text-text-light px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-text-light hover:text-primary transition-all duration-300 transform hover:scale-105">اكتشف المزيد</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-text-light reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">من نحن</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+                <div class="md:order-2">
+                     <video width="800" controls preload="metadata" loading="lazy">
+                        <source src="project.mp4" type="video/mp4">
+                        المتصفح لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+                <div class="md:order-1">
+                    <p class="text-lg leading-relaxed mb-4 text-text-dark">
+                        مؤسستنا هي منظمة غير ربحية ملتزمة بتحسين جودة الحياة للفئات الأكثر احتياجاً في المجتمع. نؤمن بأن كل فرد يستحق فرصة لحياة كريمة، ونسعى جاهدين لتحقيق ذلك من خلال برامجنا المتنوعة.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4 text-text-dark">
+                        منذ تأسيسنا، عملنا على تنفيذ مشاريع في مجالات التعليم، الصحة، الإغاثة، والتنمية المستدامة، بالتعاون مع شركائنا والمتطوعين.
+                    </p>
+                    <a href="about.html" class="inline-block bg-primary text-text-light px-6 py-3 rounded-md hover:bg-accent transition-colors">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <nav class="mt-8 bg-white p-2 md:p-3 rounded-full shadow-lg flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 lg:space-x-8 text-sm md:text-base lg:text-lg overflow-x-auto scrollbar-hide reveal">
+                <a href="#tab-about" class="tab-link active-tab flex-shrink-0 px-4 py-2 bg-primary text-text-light font-semibold rounded-full hover:bg-accent transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-about">عن الجمعية</a>
+                <a href="#tab-vision" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-vision">الرؤية</a>
+                <a href="#tab-mission" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-mission">الرسالة</a>
+                <a href="#tab-goals" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-goals">أهداف الجمعية</a>
+                <a href="#tab-executive" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-executive">المدير التنفيذي</a>
+                <a href="#tab-team" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-team">فريق العمل</a>
+                <a href="#tab-structure" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-structure">الهيكل التنظيمي</a>
+                <a href="#tab-policies" class="tab-link flex-shrink-0 px-4 py-2 text-primary font-semibold rounded-full hover:bg-primary hover:text-text-light transition-colors duration-300 whitespace-nowrap" data-target-tab="tab-policies">السياسات واللوائح</a>
+            </nav>
+            <div id="tab-content-container" class="mt-12 bg-white p-6 md:p-8 rounded-lg shadow-xl border border-gray-100 reveal">
+                <div id="tab-about" class="tab-content">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">عن الجمعية</h3>
+                    <div class="prose max-w-none text-text-dark text-lg leading-relaxed">
+                        <p>تأسست جمعية الخدمات الرياضية بمحافظة الحائط عام 2020، وهي منظمة غير ربحية تهدف إلى تعزيز الثقافة الرياضية والمجتمعية في محافظة الحائط والمناطق المجاورة. نؤمن بأن الرياضة ليست مجرد نشاط بدني، بل هي وسيلة لغرس القيم الإيجابية مثل التعاون، الانضباط، والروح الرياضية.</p>
+                        <p>نعمل على تطوير البنية التحتية الرياضية، تنظيم الفعاليات والبطولات المتنوعة، ودعم المواهب الشابة، بالإضافة إلى البرامج التي تخدم المجتمع في مجالات التعليم والتأهيل.</p>
+                        <p>منذ تأسيسنا، عملنا على تنفيذ مشاريع في مجالات التعليم، الصحة، الإغاثة، والتنمية المستدامة، بالتعاون مع شركائنا والمتطوعين.</p>
+                        <p>رسالتنا هي تقديم الدعم والعون للفئات الأكثر احتياجاً، وتوفير البرامج والمشاريع التي تساهم في تحسين جودة حياتهم، وتعزيز قيم التكافل الاجتماعي، من خلال شراكات فعالة وجهود تطوعية مخلصة.</p>
+                    </div>
+                </div>
+
+                <div id="tab-vision" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">الرؤية</h3>
+                    <div class="prose max-w-none text-text-dark text-lg leading-relaxed">
+                        <p>أن نكون المنظمة الرائدة في تعزيز الرياضة والتنمية المجتمعية، وتقديم نموذج يحتذى به في العمل الخيري والتطوعي، لبناء مجتمع مزدهر ومتعاون في محافظة الحائط.</p>
+                        <p>نتطلع إلى مستقبل يتمتع فيه الجميع بفرص متساوية وحياة كريمة، ونسعى لتمكين الأفراد والمجتمعات من تحقيق كامل إمكاناتهم من خلال الأنشطة الرياضية والبرامج التنموية.</p>
+                        <img src="vision-placeholder.png" alt="صورة توضيحية للرؤية" class="w-full max-w-md mx-auto my-6 rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <div id="tab-mission" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">الرسالة</h3>
+                    <div class="prose max-w-none text-text-dark text-lg leading-relaxed">
+                        <p>رسالتنا هي تقديم الدعم والعون للفئات الأكثر احتياجاً، وتوفير البرامج والمشاريع التي تساهم في تحسين جودة حياتهم، وتعزيز قيم التكافل الاجتماعي، من خلال شراكات فعالة وجهود تطوعية مخلصة.</p>
+                        <p>نعمل على بناء جسور الثقة بين المتبرعين والمستفيدين، وضمان الشفافية والفعالية في جميع أعمالنا الرياضية والمجتمعية، وتحفيز الشباب على المشاركة الإيجابية في مجتمعاتهم.</p>
+                        <img src="mission-placeholder.png" alt="صورة توضيحية للرسالة" class="w-full max-w-md mx-auto my-6 rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <div id="tab-goals" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">أهداف الجمعية</h3>
+                    <div class="prose max-w-none">
+                        <ul class="list-none space-y-3">
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">تقديم المساعدات المالية والعينية للأفراد والأسر المحتاجة والفقراء.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">تقديم العون والمساعدة للمرضى والأيتام والعجزة وأسر السجناء.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">المساهمة في توفير وتحسين المساكن للمحتاجين.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">العناية بذوي الاحتياجات الخاصة وكبار السن وتوفير كافة الخدمات لهم.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">الاهتمام بالصناعات والحرف اليدوية وتطويرها لتهيئة فرص العمل للمحتاجين.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">التعاون مع المعاهد الفنية ومراكز التدريب لإحتواء الخريجين.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">إجراء البحوث والدراسات فيما يساعد على تحقيق أهداف الجمعية.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">تحويل الأسر المحتاجة إلى أسر منتجة من خلال الدعم المالي والمعنوي لأعدادهم.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-2 text-primary text-xl"><i class="fas fa-check-circle"></i></span>
+                                <p class="text-lg text-text-dark">تأهيل الأسر المحتاجة من خلال الدورات التدريبية المتنوعة.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="tab-executive" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">المدير التنفيذي</h3>
+                    <div class="flex flex-col items-center text-center p-4">
+                        <img src="executive-manager-placeholder.png" alt="صورة المدير التنفيذي" class="w-40 h-40 rounded-full object-cover mb-4 border-4 border-primary-light shadow-md">
+                        <h4 class="text-2xl font-semibold text-primary mb-1">الأستاذ/ محمد سعد الأحمدي</h4>
+                        <p class="text-lg text-gray-700">المدير التنفيذي للجمعية</p>
+                        <p class="mt-4 text-text-dark max-w-xl mx-auto leading-relaxed">يتمتع الأستاذ محمد الأحمدي بخبرة واسعة في الإدارة الإستراتيجية وقيادة فرق العمل في القطاع غير الربحي. يلتزم بتحقيق أهداف الجمعية من خلال التخطيط الفعال والإشراف الدقيق على المشاريع والبرامج، مع التركيز على الشفافية والمساءلة لضمان أقصى تأثير إيجابي.</p>
+                    </div>
+                </div>
+
+                <div id="tab-team" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">فريق العمل</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person1-placeholder.png" alt="صورة عبدالعزيز توفيق المبيض" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">عبدالعزيز توفيق المبيض</h4>
+                            <p class="text-gray-700">مدير الإدارة المالية</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person2-placeholder.png" alt="صورة عبدالرزاق محمد البابطين" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">عبدالرزاق محمد البابطين</h4>
+                            <p class="text-gray-700">مدير مركز البركة الاجتماعي</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person3-placeholder.png" alt="صورة مشاري صلاح الحمد" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">مشاري صلاح الحمد</h4>
+                            <p class="text-gray-700">مدير مكتب المدير التنفيذي</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person4-placeholder.png" alt="صورة سعد محمد سعيد الأحمدي" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">سعد محمد سعيد الأحمدي</h4>
+                            <p class="text-gray-700">المدير التنفيذي</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person5-placeholder.png" alt="صورة مهند سليمان القرعاوي" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">مهند سليمان القرعاوي</h4>
+                            <p class="text-gray-700">مدير إدارة الخدمات المجتمعية</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person6-placeholder.png" alt="صورة عبدالله حسين الدوسري" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">عبدالله حسين الدوسري</h4>
+                            <p class="text-gray-700">مدير إدارة الخدمات المساندة</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person7-placeholder.png" alt="صورة عبدالرحمن يوسف السليم" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">عبدالرحمن يوسف السليم</h4>
+                            <p class="text-gray-700">مدير إدارة التسويق</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-200 border border-gray-100">
+                            <img src="person8-placeholder.png" alt="صورة سالم محمد صالح الجيشي" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-accent">
+                            <h4 class="text-xl font-semibold text-primary">سالم محمد صالح الجيشي</h4>
+                            <p class="text-gray-700">مدير إدارة الموارد البشرية</p>
+                        </div>
+                        </div>
+                </div>
+
+                <div id="tab-structure" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">الهيكل التنظيمي</h3>
+                    <div class="text-center">
+                        <img src="organizational-chart-placeholder.png" alt="الهيكل التنظيمي للجمعية" class="max-w-full h-auto mx-auto border border-gray-300 rounded-lg shadow-md">
+                        <p class="mt-4 text-text-dark text-lg">يُوضح هذا المخطط الهيكل التنظيمي المعتمد لجمعية الخدمات الرياضية بمحافظة الحائط، ويُبين الأقسام الرئيسية والفرعية وخطوط الاتصال والمسؤولية بينها لضمان سير العمل بكفاءة وفعالية.</p>
+                    </div>
+                </div>
+
+                <div id="tab-policies" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold text-primary mb-6 text-center">السياسات واللوائح</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة الاحتفاظ بالوثائق وإتلافها</span>
+                            <a href="سياسة الاحتفاظ بالوثائق وإتلافها.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة الاشتباه بعمليات غسل الأموال وجرائم تمويل الإرهاب</span>
+                            <a href="سياسة الاشتباه بعمليات غسل الأموال وجرائم تمويل الإرهاب.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة الوقاية من جرائم غسيل الأموال وتمويل الإرهاب</span>
+                            <a href="سياسة الوقاية من جرائم غسيل الأموال وتمويل الإرهاب.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة تعارض المصالح</span>
+                            <a href="سياسة تعارض المصالح.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة تنظيم العلاقة مع المستفيدين</span>
+                            <a href="سياسة تنظيم العلاقة مع المستفيدين..pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة جمع التبرعات</span>
+                            <a href="سياسة جمع التبرعات.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة خصوصية البيانات</span>
+                            <a href="سياسة خصوصية البيانات.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة مصفوفة الصلاحيات بين مجلس الإدارة والإدارة التنفيذية</span>
+                            <a href="سياسة مصفوفة الصلاحيات بين مجلس الإدارة والإدارة التنفيذية..pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة-الاستبدال-والارجاع-الخاصة-بالتبرعات</span>
+                            <a href="سياسة-الاستبدال-والارجاع-الخاصة-بالتبرعات.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة-التعامل-مع-المقبوضات</span>
+                            <a href="سياسة-التعامل-مع-المقبوضات..pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياسة-توجيه-مبلغ-التبرع-الى-مشروع-آخر</span>
+                            <a href="سياسة-توجيه-مبلغ-التبرع-الى-مشروع-آخر.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-100">
+                            <span class="text-lg font-medium text-text-dark">سياية الابلاغ عن المخالفات وحماية مقدمي البلاغات</span>
+                            <a href="سياية الابلاغ عن المخالفات وحماية مقدمي البلاغات.pdf" download class="bg-primary text-text-light px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center gap-2">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+            </div>
+    </section>
+
+    <section class="py-16 bg-white reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">أرقام وإحصائيات البركة منذ التأسيس</h2>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative w-40 h-40">
+                        <svg class="w-full h-full transform -rotate-90">
+                            <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                            <circle class="text-primary" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="calc(377 - (377 * 90) / 100)" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                        </svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-primary">+13922</span>
+                    </div>
+                    <p class="mt-4 text-lg font-semibold text-text-dark">الساعات التطوعية</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative w-40 h-40">
+                        <svg class="w-full h-full transform -rotate-90">
+                            <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                            <circle class="text-primary" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="calc(377 - (377 * 80) / 100)" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                        </svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-primary">+895</span>
+                    </div>
+                    <p class="mt-4 text-lg font-semibold text-text-dark">عدد المتطوعين</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative w-40 h-40">
+                        <svg class="w-full h-full transform -rotate-90">
+                            <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                            <circle class="text-primary" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="calc(377 - (377 * 95) / 100)" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                        </svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-primary">+2080066</span>
+                    </div>
+                    <p class="mt-4 text-lg font-semibold text-text-dark">عدد المستفيدين</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative w-40 h-40">
+                        <svg class="w-full h-full transform -rotate-90">
+                            <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                            <circle class="text-primary" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="calc(377 - (377 * 70) / 100)" stroke="currentColor" fill="transparent" r="60" cx="80" cy="80"/>
+                        </svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-primary">+208738554</span>
+                    </div>
+                    <p class="mt-4 text-lg font-semibold text-text-dark">إجمالي المساعدات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-wrapper relative py-8 bg-secondary">
+        <div class="slider-container" id="image-slider-container">
+            <img src="1.png" alt="صورة متحركة 1" loading="lazy">
+            <img src="2.png" alt="صورة متحركة 2" loading="lazy">
+            <img src="3.png" alt="صورة متحركة 3" loading="lazy">
+            <img src="4.png" alt="صورة متحركة 4" loading="lazy">
+            <img src="5.png" alt="صورة متحركة 5" loading="lazy">
+            <img src="6.png" alt="صورة متحركة 6" loading="lazy">
+            <img src="7.png" alt="صورة متحركة 7" loading="lazy">
+            <img src="8.png" alt="صورة متحركة 8" loading="lazy">
+            <img src="1.png" alt="صورة متحركة 1" loading="lazy">
+            <img src="2.png" alt="صورة متحركة 2" loading="lazy">
+            <img src="3.png" alt="صورة متحركة 3" loading="lazy">
+            <img src="4.png" alt="صورة متحركة 4" loading="lazy">
+            <img src="5.png" alt="صورة متحركة 5" loading="lazy">
+            <img src="6.png" alt="صورة متحركة 6" loading="lazy">
+            <img src="7.png" alt="صورة متحركة 7" loading="lazy">
+            <img src="8.png" alt="صورة متحركة 8" loading="lazy">
+        </div>
+
+        <button id="prev-slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-text-light p-3 rounded-full shadow-lg hover:bg-accent transition-colors duration-300 z-10" aria-label="الصورة السابقة">
+            <i class="fas fa-chevron-right"></i> </button>
+        <button id="next-slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-primary text-text-light p-3 rounded-full shadow-lg hover:bg-accent transition-colors duration-300 z-10" aria-label="الصورة التالية">
+            <i class="fas fa-chevron-left"></i> </button>
+    </section>
+
+
+
+    <section class="py-16 bg-secondary reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">برامجنا</h2>
+            <div class="flex flex-nowrap overflow-x-auto justify-center gap-8 md:gap-12 max-w-full mx-auto p-4 custom-scroll-bar">
+                <div class="bg-text-light rounded-lg shadow-xl overflow-hidden flex-none w-80 md:w-96 lg:w-96 transform transition-transform duration-300 hover:scale-105 border border-primary-light">
+                    <img src="cup.png" alt="مشروع تحدي الطيبين" class="w-full h-52 md:h-64 object-cover object-center" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-primary text-center">مشروع تحدي الطيبين</h3>
+                        <p class="text-text-dark mb-4 text-center">مباراة تحدي الطيبين لكرة القدم لعام 2025 م بمحافظة الحائط.</p>
+                        <div class="text-center">
+                            <a href="projects.html" class="inline-block bg-accent text-white px-6 py-2 rounded-full hover:bg-accent transition-colors duration-300 font-medium">تعرف على المزيد →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-text-light rounded-lg shadow-xl overflow-hidden flex-none w-80 md:w-96 lg:w-96 transform transition-transform duration-300 hover:scale-105 border border-primary-light">
+                    <img src="تحدي الجري 22.png" alt="مشروع سباق الجري" class="w-full h-52 md:h-64 object-cover object-center" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-primary text-center">سباق الجري</h3>
+                        <p class="text-text-dark mb-4 text-center">سباق الجري لعام 2025 م بمحافظة الحائط.</p>
+                        <div class="text-center">
+                            <a href="projects.html" class="inline-block bg-accent text-white px-6 py-2 rounded-full hover:bg-accent transition-colors duration-300 font-medium">تعرف على المزيد →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-text-light rounded-lg shadow-xl overflow-hidden flex-none w-80 md:w-96 lg:w-96 transform transition-transform duration-300 hover:scale-105 border border-primary-light">
+                    <img src="تحدي البلاستيشن.png" alt="مشروع لعبة البلاستيشن" class="w-full h-52 md:h-64 object-cover object-center" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-primary text-center">مشروع البلاستيشن</h3>
+                        <p class="text-text-dark mb-4 text-center">تحدي البلاستيشن لعام 2025 م بمحافظة الحائط.</p>
+                        <div class="text-center">
+                            <a href="projects.html" class="inline-block bg-accent text-white px-6 py-2 rounded-full hover:bg-accent transition-colors duration-300 font-medium">تعرف على المزيد →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="bg-primary text-text-light py-16 text-center reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">مساهمتك تحدث فرقاً</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto">كل تبرع، مهما كان صغيراً، يساعدنا على تحقيق أهدافنا ومساعدة المزيد من الناس.</p>
+            <a href="donate.html" class="inline-block bg-accent text-text-light px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:bg-text-light transition-all duration-300 transform hover:scale-105 hover:text-primary">تبرع الآن</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-text-light reveal">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">تواصل معنا</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-lg shadow-xl border border-gray-100 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold text-primary mb-6">معلومات الاتصال</h3>
+                <div class="space-y-4 text-lg text-text-dark">
+                    <p class="flex items-center"><i class="fas fa-map-marker-alt ml-3 text-accent text-2xl"></i>المملكة العربية السعودية، محافظة الحائط</p>
+                    <p class="flex items-center"><i class="fas fa-envelope ml-3 text-accent text-2xl"></i>info@yourwebsite.org</p>
+                    <p class="flex items-center"><i class="fas fa-phone ml-3 text-accent text-2xl"></i>+966 50 123 4567</p>
+                    <p class="flex items-center"><i class="fas fa-clock ml-3 text-accent text-2xl"></i>الأحد - الخميس: 9:00 صباحًا - 5:00 مساءً</p>
+                </div>
+                <div class="flex space-x-6 mt-8 justify-center md:justify-start">
+                    <a href="#" class="text-primary hover:text-accent transition-colors text-3xl" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-primary hover:text-accent transition-colors text-3xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-primary hover:text-accent transition-colors text-3xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-primary hover:text-accent transition-colors text-3xl" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/966501234567" target="_blank" class="text-green-500 hover:text-green-600 transition-colors text-3xl" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-xl border border-gray-100">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">أرسل لنا رسالة</h3>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-text-dark mb-2">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-accent focus:border-accent transition-all duration-200" placeholder="ادخل اسمك الكامل" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-text-dark mb-2">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-accent focus:border-accent transition-all duration-200" placeholder="ادخل بريدك الإلكتروني" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-lg font-medium text-text-dark mb-2">الموضوع</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-accent focus:border-accent transition-all duration-200" placeholder="موضوع رسالتك" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-text-dark mb-2">رسالتك</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-accent focus:border-accent transition-all duration-200" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-text-light px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-accent transition-colors duration-300 transform hover:scale-105">إرسال الرسالة</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="py-16 bg-text-light reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">تجدوننا هنا</h2>
+            <div class="w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                <iframe
+                    src="https://www.google.com/maps?q=25.995569229126,40.4662742614746"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="text-center text-text-dark mt-8 text-lg">
+                يمكنكم زيارة مقر الجمعية مباشرة باستخدام الخريطة أعلاه.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">اتصل بنا</h3>
+                <p class="mb-2">البريد الإلكتروني: info@example.com</p>
+                <p class="mb-2">الهاتف: +966 123 4567</p>
+                <p>العنوان: شارع الأمثلة، الرياض، المملكة العربية السعودية</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">روابط سريعة</h3>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">الأسئلة الشائعة</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">سياسة الخصوصية</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-text-light transition-colors">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-text-light">تابعنا وشركاؤنا</h3>
+                <div class="flex flex-wrap items-center justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-text-light transition-colors" aria-label="تابعنا على فيسبوك">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-text-light transition-colors" aria-label="تابعنا على تويتر">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.288 4.106 4.106 0 001.27 5.477A4.072 4.072 0 014 9.775v.058a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.84" /></svg>
+                    </a>
+                    <img src="شعار وزارة الرياضة.png" alt="شعار وزارة الرياضة السعودية" class="footer-logo" loading="lazy">
+                    <img src="logo 2.png" alt="شعار الجمعية" class="footer-logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+            <p>© 2025 جمعية الخدمات الرياضية بمحافظة الحائط. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966562402333" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-110 z-50" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
